@@ -15,7 +15,11 @@
 
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
-
+  <script type="text/javascript">
+    function formValidation() {
+      var nForm = document.forms["ContForm"]["name"]
+    }
+  </script>
 </head>
 
 <body>
@@ -176,7 +180,7 @@
     <div class="row">
       <div class="col-lg-6">
         <h2 id="contact">Contact</h2>
-        <form name="sentMessage" id="contactForm" novalidate>
+        <form name="sentMessage" id="contactForm" novalidate name="ContForm">
           <div class="control-group form-group">
             <div class="controls">
               <label>Full Name:</label>
