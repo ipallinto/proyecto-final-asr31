@@ -26,7 +26,7 @@
         document.getElementById("errorBox").style.width = "200px";
         document.getElementById("errorBox").style.backgroundColor = "red";
         document.getElementById("errorMessage").innerHTML = "Can't send message, a field or two are missing";
-
+        return false;
       }
     }
   </script>
@@ -131,11 +131,13 @@
       </a>
     </div>
   </header>
-
+  <div id="about"></div>
+  <br>
+  <br>
   <!-- Page Content -->
   <div class="container">
 
-    <h1 class="my-4" id="about">Your catering service</h1>
+    <h1 class="my-4">Your catering service</h1>
 
     <div class="row">
       <div class="col-lg-6">
@@ -146,9 +148,13 @@
         <img class="img" height="300px" width="100%" src="images/cat1.jpg" />
       </div>
     </div>
+    <div id="services"></div>
+    <br>
+    <br>
+    <br>
 
     <!-- Portfolio Section -->
-    <h2 id="services">Our Services</h2>
+    <h2>Our Services</h2>
 
     <div class="row">
       <div class="col-lg-4 col-sm-6 portfolio-item">
@@ -186,11 +192,15 @@
       </div>
     </div>
     <!-- /.row -->
+    <div id="contact"></div>
+    <br>
+    <br>
+    <br>
 
     <!-- Features Section -->
     <div class="row">
       <div class="col-lg-6">
-        <h2 id="contact">Contact</h2>
+        <h2>Contact</h2>
         <form name="sentMessage" id="contactForm" onsubmit="return formValidation()" novalidate>
           <div class="control-group form-group">
             <div class="controls">
