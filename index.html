@@ -19,8 +19,12 @@
     function formValidation() {
       var nForm = document.forms["ContForm"]["name"];
       var eForm = document.forms["ContForm"]["mail"];
-      var pForm = document.forms["ContForm"]["hone"];
+      var pForm = document.forms["ContForm"]["phone"];
       var mForm = document.forms["ContForm"]["message"];
+
+      if (nForm == "") {
+        alert("Name must be filled out");
+      }
     }
   </script>
 </head>
@@ -170,7 +174,7 @@
           <a href="#"><img class="card-img-top" src="images/cat4.jpg" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#" class="ctitle">Micromarket</a>
+              <a href="#">Micromarket</a>
             </h4>
             <p class="card-text">Not everything has to be big, our micromarket service provides small products to be carried directly home.</p>
           </div>
@@ -183,7 +187,7 @@
     <div class="row">
       <div class="col-lg-6">
         <h2 id="contact">Contact</h2>
-        <form name="sentMessage" id="contactForm" novalidate name="ContForm">
+        <form name="sentMessage" id="contactForm" onsubmit="formValidation()" novalidate name="ContForm">
           <div class="control-group form-group">
             <div class="controls">
               <label>Full Name:</label>
@@ -200,13 +204,13 @@
           <div class="control-group form-group">
             <div class="controls">
               <label>Email Address:</label>
-              <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+              <input type="email" class="form-control" name="email" id="email" required data-validation-required-message="Please enter your email address.">
             </div>
           </div>
           <div class="control-group form-group">
             <div class="controls">
               <label>Message:</label>
-              <textarea rows="5" cols="10" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+              <textarea rows="5" cols="10" class="form-control" name="message" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
             </div>
           </div>
           <div id="success"></div>
