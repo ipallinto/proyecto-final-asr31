@@ -22,10 +22,12 @@
       var pForm = document.forms["sentMessage"]["fphone"].value;
       var mForm = document.forms["sentMessage"]["fmessage"].value;
 
-      if (nForm == "") {
-        document.getElementById("errorBox").style.width = "200px";
-        document.getElementById("errorBox").style.backgroundColor = "red";
-        document.getElementById("errorMessage").innerHTML = "Can't send message, a field or two are missing";
+      if (nForm == "" || eForm == "" || pForm == "" || mForm == "") {
+        document.getElementById("errorBox").style.margin = "10px 0px";
+        document.getElementById("errorBox").style.padding = "12px";
+        document.getElementById("errorBox").style.backgroundColor = "#FFD2D2";
+        document.getElementById("errorMessage").innerHTML = "Can't send message, fields are missing";
+        document.getElementById("errorMessage").style.color = "#D8000C";
         return false;
       }
     }
