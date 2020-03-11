@@ -12,7 +12,44 @@
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("button#sendMessageButton").click(function(){
+        var cName = $("input#name").val();
+        var cPhone = $("input#phone").val();
+        var cEmail = $("input#email").val();
+        var cMessage = $("textarea#message").val();
 
+        /*<-- #ced4da -->*/
+
+        if (cName == "") {
+          $("input#name").css('border-color', 'red');
+        } else {
+          $("input#name").css('border-color', '#CED4DA');
+        }
+
+        if (cPhone == "") {
+          $("input#phone").css('border-color', 'red');
+        } else {
+          $("input#phone").css('border-color', '#CED4DA');
+        }
+
+        if (cEmail == "") {
+          $("input#email").css('border-color', 'red');
+        } else {
+          $("input#email").css('border-color', '#CED4DA');
+        }
+
+        if (cMessage == "") {
+          $("textarea#message").css('border-color', 'red');
+        } else {
+          $("textarea#message").css('border-color', '#CED4DA');
+        }
+      });
+    });
+  </script>
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
   <script type="text/javascript">
@@ -26,8 +63,12 @@
         document.getElementById("errorBox").style.margin = "10px 0px";
         document.getElementById("errorBox").style.padding = "17px 0px 1px 5px";
         document.getElementById("errorBox").style.backgroundColor = "#FFD2D2";
+        document.getElementById("errorBox").style.borderRadius = ".25rem";
         document.getElementById("errorMessage").innerHTML = "Can't send message, fields are missing";
         document.getElementById("errorMessage").style.color = "#D8000C";
+        if (!eForm.match("@")) {
+          document.getElementById("errorMessage2").innerHTML = "Email has wrong format";
+        }
         return false;
       }
     }
@@ -234,6 +275,7 @@
         </form>
         <div id="errorBox">
           <p id="errorMessage"></p>
+          <p id="errorMessage2"></p>
         </div>
       </div>
       <div class="col-lg-6">
