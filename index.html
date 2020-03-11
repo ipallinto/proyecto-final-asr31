@@ -17,7 +17,10 @@
   <link href="css/modern-business.css" rel="stylesheet">
   <script type="text/javascript">
     function formValidation() {
-      var nForm = document.forms["ContForm"]["name"]
+      var nForm = document.forms["ContForm"]["name"];
+      var eForm = document.forms["ContForm"]["mail"];
+      var pForm = document.forms["ContForm"]["hone"];
+      var mForm = document.forms["ContForm"]["message"];
     }
   </script>
 </head>
@@ -167,7 +170,7 @@
           <a href="#"><img class="card-img-top" src="images/cat4.jpg" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">Micromarket</a>
+              <a href="#" class="ctitle">Micromarket</a>
             </h4>
             <p class="card-text">Not everything has to be big, our micromarket service provides small products to be carried directly home.</p>
           </div>
@@ -184,14 +187,14 @@
           <div class="control-group form-group">
             <div class="controls">
               <label>Full Name:</label>
-              <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+              <input type="text" class="form-control" name="name" id="name" required data-validation-required-message="Please enter your name.">
               <p class="help-block"></p>
             </div>
           </div>
           <div class="control-group form-group">
             <div class="controls">
               <label>Phone Number:</label>
-              <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+              <input type="tel" class="form-control" name="phone" id="phone" required data-validation-required-message="Please enter your phone number.">
             </div>
           </div>
           <div class="control-group form-group">
