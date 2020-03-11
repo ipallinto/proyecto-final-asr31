@@ -17,13 +17,16 @@
   <link href="css/modern-business.css" rel="stylesheet">
   <script type="text/javascript">
     function formValidation() {
-      var nForm = document.forms["ContForm"]["name"];
-      var eForm = document.forms["ContForm"]["mail"];
-      var pForm = document.forms["ContForm"]["phone"];
-      var mForm = document.forms["ContForm"]["message"];
+      var nForm = document.forms["sentMessage"]["fname"].value;
+      var eForm = document.forms["sentMessage"]["fmail"].value;
+      var pForm = document.forms["sentMessage"]["fphone"].value;
+      var mForm = document.forms["sentMessage"]["fmessage"].value;
 
       if (nForm == "") {
-        alert("Name must be filled out");
+        document.getElementById("errorBox").style.width = "200px";
+        document.getElementById("errorBox").style.backgroundColor = "red";
+        document.getElementById("errorMessage").innerHTML = "Can't send message, a field or two are missing";
+
       }
     }
   </script>
@@ -137,12 +140,13 @@
     <div class="row">
       <div class="col-lg-6">
         <p>Denagoxo S.A. provides our customers with food service to a various of events, from small familiar events to weddings and VIP meetings.</p>
-        <p>Founded in 2002, Denagoxo S.A has rapidly escalated, becoming the top catering company at local and provincial level. Denagoxo S.A employs more than 500 employees around the Basque Country, Cantabria, Castille and a foreign office in Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch, Wales.</p>
+        <p>Founded in 2002, Denagoxo S.A has rapidly escalated, becoming the top catering company at local and provincial level. Denagoxo S.A employs more than 500 employees around the Basque Country, Cantabria, Castille and a foreign office in Cardiff, Wales.</p>
       </div>
       <div class="col-lg-6">
         <img class="img" height="300px" width="100%" src="images/cat1.jpg" />
       </div>
     </div>
+
     <!-- Portfolio Section -->
     <h2 id="services">Our Services</h2>
 
@@ -187,36 +191,39 @@
     <div class="row">
       <div class="col-lg-6">
         <h2 id="contact">Contact</h2>
-        <form name="sentMessage" id="contactForm" onsubmit="formValidation()" novalidate name="ContForm">
+        <form name="sentMessage" id="contactForm" onsubmit="return formValidation()" novalidate>
           <div class="control-group form-group">
             <div class="controls">
               <label>Full Name:</label>
-              <input type="text" class="form-control" name="name" id="name" required data-validation-required-message="Please enter your name.">
+              <input type="text" class="form-control" name="fname" id="name" required data-validation-required-message="Please enter your name.">
               <p class="help-block"></p>
             </div>
           </div>
           <div class="control-group form-group">
             <div class="controls">
               <label>Phone Number:</label>
-              <input type="tel" class="form-control" name="phone" id="phone" required data-validation-required-message="Please enter your phone number.">
+              <input type="tel" class="form-control" name="fphone" id="phone" required data-validation-required-message="Please enter your phone number.">
             </div>
           </div>
           <div class="control-group form-group">
             <div class="controls">
               <label>Email Address:</label>
-              <input type="email" class="form-control" name="email" id="email" required data-validation-required-message="Please enter your email address.">
+              <input type="email" class="form-control" name="fmail" id="email" required data-validation-required-message="Please enter your email address.">
             </div>
           </div>
           <div class="control-group form-group">
             <div class="controls">
               <label>Message:</label>
-              <textarea rows="5" cols="10" class="form-control" name="message" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+              <textarea rows="5" cols="10" class="form-control" name="fmessage" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
             </div>
           </div>
           <div id="success"></div>
           <!-- For success/fail messages -->
-          <button type="submit" class="btn btn-primary" id="sendMessageButton">Send Message</button>
+          <button type="submit" class="btn btn-primary" onsubmit="return formValidation()" id="sendMessageButton">Send Message</button>
         </form>
+        <div id="errorBox">
+          <p id="errorMessage"></p>
+        </div>
       </div>
       <div class="col-lg-6">
         <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1334.5764924186824!2d-2.015992419547203!3d43.30264999786926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDE4JzA5LjUiTiAywrAwMCc1NS4xIlc!5e1!3m2!1ses!2ses!4v1583700611318!5m2!1ses!2ses"></iframe>
@@ -268,7 +275,7 @@
         <h3>Wales</h3>
         <p>
           Ffordd Penmynydd
-          <br>Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch, LL61 5TZ
+          <br>Cardiff, LL61 5TZ
           <br>
         </p>
         <p>
@@ -300,7 +307,7 @@
   <!-- /.container -->
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark">
+  <footer class="py-5 bg-color">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Denagoxo S.A. 2020</p>
     </div>

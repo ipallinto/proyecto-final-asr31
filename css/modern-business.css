@@ -32,3 +32,34 @@ h4 a{
 a{
   color: #915f2c;
 }
+a:hover{
+  color: #915f2c;
+}
+
+.btn-primary{
+  background-color: #915f2c;
+}
+
+.btn-primary:hover{
+  background-color: #915f2c;
+  border-color: #915f2c;
+}
+
+.btn-primary{
+  border-color: #915f2c;
+  background-color: #915f2c;
+}
+
+.btn-secondary{
+  background-color: #915f2c;
+}
+
+.btn-secondary:hover{
+  background-color: #915f2c;
+  border-color: #915f2c;
+}
+
+.btn-secondary{
+  border-color: #915f2c;
+  background-color: #915f2c;
+}
