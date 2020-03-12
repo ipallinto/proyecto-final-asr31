@@ -66,8 +66,11 @@
         document.getElementById("errorBox").style.borderRadius = ".25rem";
         document.getElementById("errorMessage").innerHTML = "Can't send message, fields are missing";
         document.getElementById("errorMessage").style.color = "#D8000C";
-        if (!eForm.match("@")) {
+        if (!eForm.match("@") {
           document.getElementById("errorMessage2").innerHTML = "Email has wrong format";
+          document.getElementById("errorMessage").style.color = "#D8000C";
+        } else {
+          document.getElementById("errorMessage2").innerHTML = "";
         }
         return false;
       }
