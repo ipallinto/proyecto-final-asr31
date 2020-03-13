@@ -66,8 +66,11 @@
         document.getElementById("errorBox").style.borderRadius = ".25rem";
         document.getElementById("errorMessage").innerHTML = "Can't send message, fields are missing";
         document.getElementById("errorMessage").style.color = "#D8000C";
-        if (!eForm.match("@")) {
+        if (!eForm.match("@") {
           document.getElementById("errorMessage2").innerHTML = "Email has wrong format";
+          document.getElementById("errorMessage").style.color = "#D8000C";
+        } else {
+          document.getElementById("errorMessage2").innerHTML = "";
         }
         return false;
       }
@@ -104,16 +107,6 @@
               <a class="dropdown-item" href="portfolio-3-col.html">Take Away</a>
               <a class="dropdown-item" href="portfolio-4-col.html">Micromarket</a>
               <a class="dropdown-item" href="pricing.html">Services Pricing</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Blog
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
-              <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
-              <a class="dropdown-item" href="blog-post.html">Blog Post</a>
             </div>
           </li>
           <li class="nav-item">
