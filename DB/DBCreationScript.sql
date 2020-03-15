@@ -10,6 +10,8 @@ CONSTRAINT employees_pk
 PRIMARY KEY (empno)
 );
 
+INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (11, 'Carlos Contreras', 155, '2011-02-15', 12, 1, 'it');
+
 CREATE TABLE payrolls (
 payno number,
 start_date date,
@@ -20,6 +22,8 @@ CONSTRAINT payrolls_pk
 PRIMARY KEY (payno)
 );
 
+INSERT INTO payrolls (payno, start_date, end_date, amount, empno) VALUES (11, '2011-02-15', '2020-05-15', 2500, 11);
+
 CREATE TABLE offices (
 officeid number,
 city varchar2(50),
@@ -29,6 +33,8 @@ office_boss number,
 CONSTRAINT offices_pk
 PRIMARY KEY (officeid)
 );
+
+INSERT INTO offices (officeid, city, region, sales, office_boss) VALUES (155, 'donostia', 'north', 100, 11);
 
 -- SubCategories
 
@@ -164,24 +170,23 @@ PRIMARY KEY (vehicleid)
 
 -- m:n section
 
-CREATE TABLE type (); -- There can't be employees with more than one type 
-
-CREATE TABLE class (); -- Employees can't be on more than one department at the same time
-
 CREATE TABLE serves (
 empno number,
 eventid number DEFAULT NULL,
 services VARCHAR2(255)
+PRIMARY KEY (eventid, empno)
 );
 
 CREATE TABLE drive (
 empno number,
 vehicleid number DEFAULT NULL,
 drive_date date
+PRIMARY KEY (vehicleid, empno)
 );
 
 CREATE TABLE cooks (
 empno number,
 menuid number DEFAULT NULL,
 menu_date date
+PRIMARY KEY (menuid, empno)
 );
