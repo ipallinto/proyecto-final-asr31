@@ -164,22 +164,24 @@ PRIMARY KEY (vehicleid)
 
 -- m:n section
 
-CREATE TABLE type (
+CREATE TABLE type (); -- There can't be employees with more than one type 
 
-);
-
-CREATE TABLE class (
-
-);
+CREATE TABLE class (); -- Employees can't be 
 
 CREATE TABLE serves (
-
+empno number,
+eventid number DEFAULT NULL,
+services VARCHAR2(255)
 );
 
 CREATE TABLE drive (
-
+empno number,
+vehicleid number DEFAULT NULL,
+drive_date date
 );
 
 CREATE TABLE cooks (
-
+empno number,
+menuid number DEFAULT NULL,
+menu_date date
 );
