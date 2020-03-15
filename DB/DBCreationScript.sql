@@ -166,7 +166,7 @@ PRIMARY KEY (vehicleid)
 
 CREATE TABLE type (); -- There can't be employees with more than one type 
 
-CREATE TABLE class (); -- Employees can't be 
+CREATE TABLE class (); -- Employees can't be on more than one department at the same time
 
 CREATE TABLE serves (
 empno number,
