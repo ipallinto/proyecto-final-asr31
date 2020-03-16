@@ -163,7 +163,7 @@ PRIMARY KEY (deliverid)
 CREATE TABLE vehicles (
 vehicleid number DEFAULT NULL,
 name varchar2(50) DEFAULT NULL,
-plate varchar2(50) DEFAULT NULL,
+plate varchar2(50) UNIQUE,
 CONSTRAINT vehicles_pk
 PRIMARY KEY (vehicleid)
 );
