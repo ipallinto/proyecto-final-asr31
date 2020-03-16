@@ -1,31 +1,31 @@
 CREATE TABLE employees (
-empno number,
-name varchar2(50),
-age number,
+empno int,
+name varchar,
+age int,
 contract date,
-office number,
-boss number,
-type varchar2(20),
+office int,
+boss int,
+type varchar,
 CONSTRAINT employees_pk
 PRIMARY KEY (empno)
 );
 
 CREATE TABLE payrolls (
-payno number,
+payno int,
 start_date date,
 end_date date,
 amount float,
-empno number,
+empno int,
 CONSTRAINT payrolls_pk
 PRIMARY KEY (payno)
 );
 
 CREATE TABLE offices (
-officeid number,
-city varchar2(50),
-region varchar2(50),
-sales number,
-office_boss number,
+officeid int,
+city varchar,
+region varchar,
+sales int,
+office_boss int,
 CONSTRAINT offices_pk
 PRIMARY KEY (officeid)
 );
@@ -33,63 +33,56 @@ PRIMARY KEY (officeid)
 -- SubCategories
 
 CREATE TABLE salesmen (
-empno number,
-quota number,
-dep_boss number,
-officeid number,
+empno int,
+quota int,
+officeid int,
 CONSTRAINT salesmen_pk
 PRIMARY KEY (empno)
 );
 
 CREATE TABLE human_resources (
-empno number,
-dep_boss number,
-officeid number,
+empno int,
+officeid int,
 CONSTRAINT human_resources_pk
 PRIMARY KEY (empno)
 );
 
 CREATE TABLE waiters (
-empno number,
-dep_boss number,
+empno int,
 CONSTRAINT waiters_pk
 PRIMARY KEY (empno)
 );
 
 CREATE TABLE chefs (
-empno number,
-dep_boss number,
+empno int,
 CONSTRAINT chefs_pk
 PRIMARY KEY (empno)
 );
 
 CREATE TABLE deliverers (
-empno number,
-dep_boss number,
+empno int,
 CONSTRAINT deliverers_pk
 PRIMARY KEY (empno)
 );
 
 CREATE TABLE it (
-empno number,
-dep_boss number,
-officeid number,
+empno int,
+officeid int,
 CONSTRAINT it_pk
 PRIMARY KEY (empno)
 );
 
 CREATE TABLE administration (
-empno number,
-dep_boss number,
-officeid number,
-class varchar2(20),
+empno int,
+officeid int,
+class varchar,
 CONSTRAINT administration_pk
 PRIMARY KEY (empno)
 );
 
 CREATE TABLE clients (
-clientno number,
-name varchar2(50),
+clientno int,
+name varchar,
 CONSTRAINT clientno_pk
 PRIMARY KEY (clientno)
 );
@@ -97,101 +90,114 @@ PRIMARY KEY (clientno)
 -- Object Related
 
 CREATE TABLE orders (
-orderno number DEFAULT NULL,
+orderno int DEFAULT NULL,
 orderdate date DEFAULT NULL,
-price number DEFAULT NULL,
-clientno number DEFAULT NULL,
-empno number DEFAULT NULL,
-sent boolean DEFAULT NULL,
-deliverid number DEFAULT NULL,
+price int DEFAULT NULL,
+clientno int DEFAULT NULL,
+empno int DEFAULT NULL,
+sent bit DEFAULT NULL,
+deliverid int DEFAULT NULL,
 CONSTRAINT orders_pk
 PRIMARY KEY (orderno)
 );
 
 CREATE TABLE menus (
-menuid number DEFAULT NULL,
-price number DEFAULT NULL,
-clientno number DEFAULT NULL,
-empno number DEFAULT NULL,
+menuid int DEFAULT NULL,
+price int DEFAULT NULL,
+empno int DEFAULT NULL,
+orderid int DEFAULT NULL,
 CONSTRAINT orders_pk
-PRIMARY KEY (menuid)
+PRIMARY KEY (menuid, orderid)
 );
 
 CREATE TABLE meals (
-mealid number DEFAULT NULL,
-price number DEFAULT NULL,
-name varchar2(50) DEFAULT NULL,
-quantity number DEFAULT NULL,
+mealid int DEFAULT NULL,
+price int DEFAULT NULL,
+name varchar DEFAULT NULL,
 CONSTRAINT meals_pk
 PRIMARY KEY (mealid)
 );
 
 CREATE TABLE repairs (
-repairid number DEFAULT NULL,
+repairid int DEFAULT NULL,
 repair_date date DEFAULT NULL,
-description varchar2(50) DEFAULT NULL,
-quantity number DEFAULT NULL,
+description varchar DEFAULT NULL,
+empno int,
+done bit,
 CONSTRAINT repairs_pk
 PRIMARY KEY (repairid)
 );
 
 CREATE TABLE ingredients (
-ingrid number DEFAULT NULL,
-description varchar2(50) DEFAULT NULL,
-stock number DEFAULT NULL,
+ingrid int DEFAULT NULL,
+description varchar DEFAULT NULL,
+stock int DEFAULT NULL,
 CONSTRAINT ingredients_pk
 PRIMARY KEY (ingrid)
 );
 
 CREATE TABLE events (
-eventid number DEFAULT NULL,
-name varchar2(50) DEFAULT NULL,
+eventid int DEFAULT NULL,
+name varchar DEFAULT NULL,
 event_date date,
-place varchar2(50) DEFAULT NULL,
-clientno number DEFAULT NULL
+place varchar DEFAULT NULL,
+clientno int DEFAULT NULL
 CONSTRAINT events_pk
 PRIMARY KEY (eventid)
 );
 
 CREATE TABLE delivers (
-deliverid number DEFAULT NULL,
-deliverdate date DEFAULT NULL,
-eventid number DEFAULT NULL,
-empno number DEFAULT NULL,
-done boolean DEFAULT NULL,
+deliverid int DEFAULT NULL,
+deliver_date date DEFAULT NULL,
+eventid int DEFAULT NULL,
+empno int DEFAULT NULL,
+done bit DEFAULT NULL,
 CONSTRAINT delivers_pk
 PRIMARY KEY (deliverid)
 );
 
 CREATE TABLE vehicles (
-vehicleid number DEFAULT NULL,
-name varchar2(50) DEFAULT NULL,
-plate varchar2(50) UNIQUE,
+vehicleid int DEFAULT NULL,
+name varchar DEFAULT NULL,
+plate varchar UNIQUE,
 CONSTRAINT vehicles_pk
 PRIMARY KEY (vehicleid)
 );
 
 -- m:n section
+CREATE TABLE form (
+menuid int,
+mealid int,
+CONSTRAINT form_pk
+PRIMARY KEY (menuid, mealid)
+);
+
+CREATE TABLE make (
+ingrid int,
+mealid int,
+CONSTRAINT make_pk
+PRIMARY KEY (ingrid, mealid)
+);
 
 CREATE TABLE serves (
-empno number,
-eventid number DEFAULT NULL,
-services VARCHAR2(255)
+empno int,
+eventid int DEFAULT NULL,
+services varchar,
 CONSTRAINT serve_pk
 PRIMARY KEY (eventid, empno)
 );
 
 CREATE TABLE drive (
-empno number,
-vehicleid number DEFAULT NULL,
+empno int,
+vehicleid int DEFAULT NULL,
 drive_date date
 CONSTRAINT drive_pk
 PRIMARY KEY (vehicleid, empno)
 );
 
 CREATE TABLE cooks (
-empno number,
-menuid number DEFAULT NULL,
+empno int,
+menuid int DEFAULT NULL,
 menu_date date
 CONSTRAINT cooks_pk
 PRIMARY KEY (menuid, empno)
