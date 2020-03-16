@@ -126,6 +126,15 @@ CONSTRAINT meals_pk
 PRIMARY KEY (mealid)
 );
 
+CREATE TABLE repairs (
+repairid number DEFAULT NULL,
+repair_date date DEFAULT NULL,
+description varchar2(50) DEFAULT NULL,
+quantity number DEFAULT NULL,
+CONSTRAINT repairs_pk
+PRIMARY KEY (repairid)
+);
+
 CREATE TABLE ingredients (
 ingrid number DEFAULT NULL,
 description varchar2(50) DEFAULT NULL,
@@ -168,6 +177,7 @@ CREATE TABLE serves (
 empno number,
 eventid number DEFAULT NULL,
 services VARCHAR2(255)
+CONSTRAINT serve_pk
 PRIMARY KEY (eventid, empno)
 );
 
@@ -175,6 +185,7 @@ CREATE TABLE drive (
 empno number,
 vehicleid number DEFAULT NULL,
 drive_date date
+CONSTRAINT drive_pk
 PRIMARY KEY (vehicleid, empno)
 );
 
@@ -182,5 +193,6 @@ CREATE TABLE cooks (
 empno number,
 menuid number DEFAULT NULL,
 menu_date date
+CONSTRAINT cooks_pk
 PRIMARY KEY (menuid, empno)
 );
