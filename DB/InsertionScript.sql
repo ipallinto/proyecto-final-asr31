@@ -316,3 +316,11 @@ INSERT INTO events (eventid, name, event_date, place, clientno) VALUES (1011, 'i
 INSERT INTO events (eventid, name, event_date, place, clientno) VALUES (1012, 'royal reunion', '2020-05-01', 'europe conference center', 211);
 INSERT INTO events (eventid, name, event_date, place, clientno) VALUES (1013, 'VIP meeting', '2020-05-30', 'villa soro', 211);
 INSERT INTO events (eventid, name, event_date, place, clientno) VALUES (1014, 'anime conference', '2020-07-14', 'kursaal', 211);
+
+--INSERT SALESMEN
+INSERT INTO salesmen (empno, quota, officeid) VALUES (15, 100000, 1155);
+INSERT INTO salesmen (empno, quota, officeid) VALUES (16, 75000, 1156);
+INSERT INTO salesmen (empno, quota, officeid) VALUES (22, 102000, 1157);
+INSERT INTO salesmen (empno, quota, officeid) VALUES (23, 48000, 1158);
+INSERT INTO salesmen (empno, quota, officeid) VALUES (28, 98000, 1158);
+INSERT INTO salesmen (empno, quota, officeid) VALUES (34, 250000, 1160);
