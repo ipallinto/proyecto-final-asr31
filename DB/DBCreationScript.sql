@@ -90,7 +90,7 @@ PRIMARY KEY (clientno)
 -- Object Related
 
 CREATE TABLE orders (
-orderno int DEFAULT NULL,
+orderid int DEFAULT NULL,
 orderdate date DEFAULT NULL,
 price int DEFAULT NULL,
 clientno int DEFAULT NULL,
@@ -98,7 +98,7 @@ empno int DEFAULT NULL,
 sent bit DEFAULT NULL,
 deliverid int DEFAULT NULL,
 CONSTRAINT orders_pk
-PRIMARY KEY (orderno)
+PRIMARY KEY (orderid)
 );
 
 CREATE TABLE menus (
