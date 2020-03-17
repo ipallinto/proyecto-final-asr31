@@ -116,19 +116,19 @@ INSERT INTO clients (clientno, name) VALUES (219, 'ANA ARGUELLO');
 INSERT INTO clients (clientno, name) VALUES (220, 'MARIA GAMBOA');
 
 --INSERT ORDERS
-INSERT INTO orders (orderno, orderdate, price, clientno, empno, sent, deliverid) VALUES (311, '2019-07-12', 200, 211, 15, 1, 511);
-INSERT INTO orders (orderno, orderdate, price, clientno, empno, sent, deliverid) VALUES (312, '2019-07-15', 260, 212, 15, 1, 512);
-INSERT INTO orders (orderno, orderdate, price, clientno, empno, sent, deliverid) VALUES (313, '2019-07-22', 52, 212, 15, 1, 513);
-INSERT INTO orders (orderno, orderdate, price, clientno, empno, sent, deliverid) VALUES (314, '2019-08-03', 143, 213, 15, 1, 514);
-INSERT INTO orders (orderno, orderdate, price, clientno, empno, sent, deliverid) VALUES (315, '2019-08-03', 357, 214, 15, 1, 515);
-INSERT INTO orders (orderno, orderdate, price, clientno, empno, sent, deliverid) VALUES (316, '2019-08-03', 28, 215, 15, 1, 516);
-INSERT INTO orders (orderno, orderdate, price, clientno, empno, sent, deliverid) VALUES (317, '2019-08-03', 687, 213, 15, 1, 517);
-INSERT INTO orders (orderno, orderdate, price, clientno, empno, sent, deliverid) VALUES (318, '2019-08-03', 695, 215, 15, 1, 518);
-INSERT INTO orders (orderno, orderdate, price, clientno, empno, sent, deliverid) VALUES (319, '2019-08-03', 615, 216, 15, 0, 519);
-INSERT INTO orders (orderno, orderdate, price, clientno, empno, sent, deliverid) VALUES (320, '2019-08-03', 987, 217, 15, 0, 519);
-INSERT INTO orders (orderno, orderdate, price, clientno, empno, sent, deliverid) VALUES (321, '2019-08-03', 161, 218, 15, 0, 519);
-INSERT INTO orders (orderno, orderdate, price, clientno, empno, sent, deliverid) VALUES (322, '2019-08-03', 354, 219, 15, 0, 520);
-INSERT INTO orders (orderno, orderdate, price, clientno, empno, sent, deliverid) VALUES (323, '2019-08-03', 65, 220, 15, 0, 520);
+INSERT INTO orders (orderid, orderdate, price, clientno, empno, sent, deliverid) VALUES (311, '2019-07-12', 200, 211, 15, 1, 511);
+INSERT INTO orders (orderid, orderdate, price, clientno, empno, sent, deliverid) VALUES (312, '2019-07-15', 260, 212, 15, 1, 512);
+INSERT INTO orders (orderid, orderdate, price, clientno, empno, sent, deliverid) VALUES (313, '2019-07-22', 52, 212, 15, 1, 513);
+INSERT INTO orders (orderid, orderdate, price, clientno, empno, sent, deliverid) VALUES (314, '2019-08-03', 143, 213, 15, 1, 514);
+INSERT INTO orders (orderid, orderdate, price, clientno, empno, sent, deliverid) VALUES (315, '2019-08-03', 357, 214, 15, 1, 515);
+INSERT INTO orders (orderid, orderdate, price, clientno, empno, sent, deliverid) VALUES (316, '2019-08-03', 28, 215, 15, 1, 516);
+INSERT INTO orders (orderid, orderdate, price, clientno, empno, sent, deliverid) VALUES (317, '2019-08-03', 687, 213, 15, 1, 517);
+INSERT INTO orders (orderid, orderdate, price, clientno, empno, sent, deliverid) VALUES (318, '2019-08-03', 695, 215, 15, 1, 518);
+INSERT INTO orders (orderid, orderdate, price, clientno, empno, sent, deliverid) VALUES (319, '2019-08-03', 615, 216, 15, 0, 519);
+INSERT INTO orders (orderid, orderdate, price, clientno, empno, sent, deliverid) VALUES (320, '2019-08-03', 987, 217, 15, 0, 519);
+INSERT INTO orders (orderid, orderdate, price, clientno, empno, sent, deliverid) VALUES (321, '2019-08-03', 161, 218, 15, 0, 519);
+INSERT INTO orders (orderid, orderdate, price, clientno, empno, sent, deliverid) VALUES (322, '2019-08-03', 354, 219, 15, 0, 520);
+INSERT INTO orders (orderid, orderdate, price, clientno, empno, sent, deliverid) VALUES (323, '2019-08-03', 65, 220, 15, 0, 520);
 
 --INSERT SERVES
 INSERT INTO serves (empno, eventid, serv_date) VALUES (46, 1011, '2020-04-25');
