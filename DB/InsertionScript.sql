@@ -173,14 +173,14 @@ INSERT INTO menus (menuid, price, empno, orderid) VALUES (514, 60, 212, 314);
 INSERT INTO menus (menuid, price, empno, orderid) VALUES (515, 45, 212, 315);
 
 --Join both
-INSERT INTO form (menuid, mealid, orderid) VALUES (511, 611);
-INSERT INTO form (menuid, mealid, orderid) VALUES (511, 612);
-INSERT INTO form (menuid, mealid, orderid) VALUES (512, 613);
-INSERT INTO form (menuid, mealid, orderid) VALUES (513, 614);
-INSERT INTO form (menuid, mealid, orderid) VALUES (514, 615);
-INSERT INTO form (menuid, mealid, orderid) VALUES (514, 616);
-INSERT INTO form (menuid, mealid, orderid) VALUES (514, 617);
-INSERT INTO form (menuid, mealid, orderid) VALUES (515, 611);
+INSERT INTO form (menuid, mealid, orderid) VALUES (511, 611, 311);
+INSERT INTO form (menuid, mealid, orderid) VALUES (511, 612, 311);
+INSERT INTO form (menuid, mealid, orderid) VALUES (512, 613, 313);
+INSERT INTO form (menuid, mealid, orderid) VALUES (513, 614, 312);
+INSERT INTO form (menuid, mealid, orderid) VALUES (514, 615, 314);
+INSERT INTO form (menuid, mealid, orderid) VALUES (514, 616, 314);
+INSERT INTO form (menuid, mealid, orderid) VALUES (514, 617, 322);
+INSERT INTO form (menuid, mealid, orderid) VALUES (515, 611, 323);
 
 --INSERT MEALS
 INSERT INTO meals (mealid, price, name) VALUES (611, 12, 'vegan exclusive');
