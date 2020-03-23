@@ -1,50 +1,100 @@
 -- INSERT EMPLOYEES
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (11, 'ANTONIO ALCAZAR', 25, '2002-02-15', 1155, 11, 'it');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (12, 'CARLOS CONTRERAS', 24, '2007-12-07', 1155, 11, 'it');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (13, 'JOSE MARTINEZ', 28, '2003-04-30', 1155, 13, 'human_resources');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (14, 'GABRIELA PEREZ', 35, '2008-10-14', 1155, 14, 'administration');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (15, 'JULIANA ACERO', 28, '2012-02-28', 1155, 15, 'salesmen');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (16, 'MIGUEL CASANOVA', 28, '2005-03-31', 1155, 15, 'salesmen');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (17, 'JOSE GIRON', 29, '2009-07-11', 1156, 11, 'it');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (18, 'FELIPE COLOMER', 24, '2014-01-25', 1156, 13, 'human_resources');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (19, 'JAIME AYALA', 24, '2016-12-25', 1156, 14, 'administration');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (20, 'FRANCISCO PASTOR', 26, '2004-06-05', 1156, 14, 'administration');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (21, 'SAMUEL MATUTE', 27, '2006-09-11', 1157, 11, 'it');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (22, 'TRINIDAD MARCHENA', 19, '2017-08-26', 1157, 15, 'salesmen');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (23, 'RAMON PERIS', 23, '2008-05-01', 1158, 15, 'salesmen');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (24, 'ANDRES RAYO', 18, '2018-10-12', 1158, 11, 'it');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (25, 'LUIS ACUÑA', 32, '2003-06-19', 1158, 13, 'human_resources');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (26, 'GUILLERMO VICENTE', 28, '2011-08-20', 1158, 11, 'it');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (27, 'MANUELA ARRIAGA', 62, '2006-10-25', 1159, 11, 'it');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (28, 'ALICIA CASTELO', 55, '2008-04-17', 1160, 15, 'salesmen');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (29, 'JAVIER ESPINAR', 22, '2002-11-09', 1160, 14, 'administration');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (30, 'IROHA TAMAKI', 18, '2020-02-04', 1160, 13, 'human_resources');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (31, 'JAIME LLORENS', 47, '2010-12-20', 1160, 11, 'it');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (32, 'SERGIO PORTILLO', 59, '2014-10-10', 1161, 14, 'administration');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (33, 'SUSANA ORIA', 45, '2003-12-06', 1161, 11, 'it');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (34, 'BELEN DURO', 42, '2012-08-19', 1159, 15, 'salesmen');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (35, 'MADOKA KANAME', 24, '2009-05-07', 1159, 14, 'administration');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (36, 'JORGE ROA', 20, '2011-31-01', null, 36, 'chefs');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (37, 'HERMENEGILDO FOREIRO', 66, '2002-08-22', null, 36, 'chefs');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (38, 'LUCHO PORTUANO', 27, '2005-01-07', null, 36, 'chefs');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (39, 'ANGEL SOTELO', 42, '2013-10-06', null, 36, 'chefs');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (40, 'DEBORA ANGELES', 54, '2015-02-25', null, 36, 'chefs');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (41, 'MARGARITA VINUESA', 36, '2018-12-20', null, 36, 'chefs');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (42, 'MARIA MALDONADO', 33, '2003-10-06', null, 36, 'chefs');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (43, 'HOMURA AKEMI', 28, '2012-07-25', null, 43, 'delivers');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (44, 'NACHO VIDAL', 42, '2016-02-29', null, 43, 'delivers');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (45, 'MIKI SAYAKA', 20, '2002-12-09', null, 43, 'delivers');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (46, 'NIEVES RUEDA', 40, '2007-05-04', null, 46, 'waiters');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (47, 'ANDRES CUELLO', 19, '2010-05-30', null, 46, 'waiters');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (48, 'MAMI TOMOE', 25, '2018-03-22', null, 46, 'waiters');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (49, 'ADRIAN MORAL', 55, '2014-02-04', null, 46, 'waiters');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (50, 'MATT ENMEN', 36, '2011-06-29', null, 46, 'waiters');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (51, 'MANUEL ARCOS', 52, '2015-01-31', null, 46, 'waiters');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (52, 'ANA BUSTAMANTE', 39, '2013-03-01', null, 46, 'waiters');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (53, 'VICENTE CONTRERAS', 47, '2013-03-01', null, 46, 'waiters');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (54, 'CARLOS TUSA', 52, '2004-12-31', null, 46, 'waiters');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (55, 'KYOKO SAKURA', 20, '2008-12-21', null, 46, 'waiters');
-INSERT INTO employees (empno, name, age, contract, office, boss, type) VALUES (56, 'CINDY NERO', 31, '2019-05-02', null, 46, 'waiters');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (11, 'ANTONIO ALCAZAR', 25, '2002-02-15', 11, 'it');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (12, 'CARLOS CONTRERAS', 24, '2007-12-07', 11, 'it');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (13, 'JOSE MARTINEZ', 28, '2003-04-30', 13, 'human_resources');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (14, 'GABRIELA PEREZ', 35, '2008-10-14', 14, 'administration');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (15, 'JULIANA ACERO', 28, '2012-02-28', 15, 'salesmen');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (16, 'MIGUEL CASANOVA', 28, '2005-03-31', 15, 'salesmen');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (17, 'JOSE GIRON', 29, '2009-07-11', 11, 'it');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (18, 'FELIPE COLOMER', 24, '2014-01-25', 13, 'human_resources');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (19, 'JAIME AYALA', 24, '2016-12-25', 14, 'administration');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (20, 'FRANCISCO PASTOR', 26, '2004-06-05', 14, 'administration');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (21, 'SAMUEL MATUTE', 27, '2006-09-11', 11, 'it');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (22, 'TRINIDAD MARCHENA', 19, '2017-08-26', 15, 'salesmen');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (23, 'RAMON PERIS', 23, '2008-05-01', 15, 'salesmen');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (24, 'ANDRES RAYO', 18, '2018-10-12', 11, 'it');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (25, 'LUIS ACUÑA', 32, '2003-06-19', 13, 'human_resources');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (26, 'GUILLERMO VICENTE', 28, '2011-08-20', 11, 'it');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (27, 'MANUELA ARRIAGA', 62, '2006-10-25', 11, 'it');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (28, 'ALICIA CASTELO', 55, '2008-04-17', 15, 'salesmen');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (29, 'JAVIER ESPINAR', 22, '2002-11-09', 14, 'administration');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (30, 'IROHA TAMAKI', 18, '2020-02-04', 13, 'human_resources');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (31, 'JAIME LLORENS', 47, '2010-12-20', 11, 'it');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (32, 'SERGIO PORTILLO', 59, '2014-10-10', 14, 'administration');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (33, 'SUSANA ORIA', 45, '2003-12-06', 11, 'it');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (34, 'BELEN DURO', 42, '2012-08-19', 15, 'salesmen');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (35, 'MADOKA KANAME', 24, '2009-05-07', 14, 'administration');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (36, 'JORGE ROA', 20, '2011-31-01', 36, 'chefs');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (37, 'HERMENEGILDO FOREIRO', 66, '2002-08-22', 36, 'chefs');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (38, 'LUCHO PORTUANO', 27, '2005-01-07', 36, 'chefs');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (39, 'ANGEL SOTELO', 42, '2013-10-06', 36, 'chefs');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (40, 'DEBORA ANGELES', 54, '2015-02-25', 36, 'chefs');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (41, 'MARGARITA VINUESA', 36, '2018-12-20', 36, 'chefs');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (42, 'MARIA MALDONADO', 33, '2003-10-06', 36, 'chefs');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (43, 'HOMURA AKEMI', 28, '2012-07-25', 43, 'delivers');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (44, 'NACHO VIDAL', 42, '2016-02-29', 43, 'delivers');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (45, 'MIKI SAYAKA', 20, '2002-12-09', 43, 'delivers');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (46, 'NIEVES RUEDA', 40, '2007-05-04', 46, 'waiters');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (47, 'ANDRES CUELLO', 19, '2010-05-30', 46, 'waiters');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (48, 'MAMI TOMOE', 25, '2018-03-22', 46, 'waiters');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (49, 'ADRIAN MORAL', 55, '2014-02-04', 46, 'waiters');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (50, 'MATT ENMEN', 36, '2011-06-29', 46, 'waiters');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (51, 'MANUEL ARCOS', 52, '2015-01-31', 46, 'waiters');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (52, 'ANA BUSTAMANTE', 39, '2013-03-01', 46, 'waiters');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (53, 'VICENTE CONTRERAS', 47, '2013-03-01', 46, 'waiters');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (54, 'CARLOS TUSA', 52, '2004-12-31', 46, 'waiters');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (55, 'KYOKO SAKURA', 20, '2008-12-21', 46, 'waiters');
+INSERT INTO employees (empno, name, age, contract, boss, type) VALUES (56, 'CINDY NERO', 31, '2019-05-02', 46, 'waiters');
+
+--INSERT SALESMEN
+INSERT INTO salesmen (empno, quota, officeid) VALUES (15, 100000, 1155);
+INSERT INTO salesmen (empno, quota, officeid) VALUES (16, 75000, 1156);
+INSERT INTO salesmen (empno, quota, officeid) VALUES (22, 102000, 1157);
+INSERT INTO salesmen (empno, quota, officeid) VALUES (23, 48000, 1158);
+INSERT INTO salesmen (empno, quota, officeid) VALUES (28, 98000, 1158);
+INSERT INTO salesmen (empno, quota, officeid) VALUES (34, 250000, 1160);
+
+--INSERT human_resources
+INSERT INTO human_resources (empno, officeid) VALUES (43);
+
+
+--INSERT deliverers
+INSERT INTO deliverers (empno) VALUES (43);
+INSERT INTO deliverers (empno) VALUES (44);
+INSERT INTO deliverers (empno) VALUES (45);
+
+--INSERT it
+INSERT INTO it (empno, officeid) VALUES (11, 1155);
+INSERT INTO it (empno, officeid) VALUES (12, 1155);
+INSERT INTO it (empno, officeid) VALUES (17, 1156);
+INSERT INTO it (empno, officeid) VALUES (21, 1157);
+INSERT INTO it (empno, officeid) VALUES (24, 1158);
+INSERT INTO it (empno, officeid) VALUES (26, 1158);
+INSERT INTO it (empno, officeid) VALUES (27, 1159);
+INSERT INTO it (empno, officeid) VALUES (31, 1160);
+INSERT INTO it (empno, officeid) VALUES (33, 1161);
+
+--INSERT waiters
+INSERT INTO waiters (empno) VALUES (46);
+INSERT INTO waiters (empno) VALUES (47);
+INSERT INTO waiters (empno) VALUES (48);
+INSERT INTO waiters (empno) VALUES (49);
+INSERT INTO waiters (empno) VALUES (50);
+INSERT INTO waiters (empno) VALUES (51);
+INSERT INTO waiters (empno) VALUES (52);
+INSERT INTO waiters (empno) VALUES (53);
+INSERT INTO waiters (empno) VALUES (54);
+INSERT INTO waiters (empno) VALUES (55);
+INSERT INTO waiters (empno) VALUES (56);
+
+--INSERT chefs
+INSERT INTO chefs (empno) VALUES (36);
+INSERT INTO chefs (empno) VALUES (37);
+INSERT INTO chefs (empno) VALUES (38);
+INSERT INTO chefs (empno) VALUES (39);
+INSERT INTO chefs (empno) VALUES (40);
+INSERT INTO chefs (empno) VALUES (41);
+INSERT INTO chefs (empno) VALUES (42);
 
 --INSERT PAYROLLS
 INSERT INTO payrolls (payno, start_date, end_date, amount, empno) VALUES (111, '2002-02-15', '2018-12-22', 1980, 11);

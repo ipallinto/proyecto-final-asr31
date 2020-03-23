@@ -1,11 +1,15 @@
+CREATE DATABASE DENAGOXO;
+go
+USE DENAGOXO;
+go
+
 CREATE TABLE employees (
 empno int,
-name varchar,
+name varchar(50),
 age int,
 contract date,
-office int,
 boss int,
-type varchar,
+type varchar(50),
 CONSTRAINT employees_pk
 PRIMARY KEY (empno)
 );
@@ -22,8 +26,8 @@ PRIMARY KEY (payno)
 
 CREATE TABLE offices (
 officeid int,
-city varchar,
-region varchar,
+city varchar(50),
+region varchar(50),
 sales int,
 office_boss int,
 CONSTRAINT offices_pk
@@ -75,14 +79,14 @@ PRIMARY KEY (empno)
 CREATE TABLE administration (
 empno int,
 officeid int,
-class varchar,
+class varchar(50),
 CONSTRAINT administration_pk
 PRIMARY KEY (empno)
 );
 
 CREATE TABLE clients (
 clientno int,
-name varchar,
+name varchar(50),
 CONSTRAINT clientno_pk
 PRIMARY KEY (clientno)
 );
@@ -113,7 +117,7 @@ PRIMARY KEY (menuid, orderid)
 CREATE TABLE meals (
 mealid int DEFAULT NULL,
 price int DEFAULT NULL,
-name varchar DEFAULT NULL,
+name varchar(50) DEFAULT NULL,
 CONSTRAINT meals_pk
 PRIMARY KEY (mealid)
 );
@@ -121,7 +125,7 @@ PRIMARY KEY (mealid)
 CREATE TABLE repairs (
 repairid int DEFAULT NULL,
 repair_date date DEFAULT NULL,
-description varchar DEFAULT NULL,
+description varchar(50) DEFAULT NULL,
 empno int,
 done bit,
 CONSTRAINT repairs_pk
@@ -130,7 +134,7 @@ PRIMARY KEY (repairid)
 
 CREATE TABLE ingredients (
 ingrid int DEFAULT NULL,
-description varchar DEFAULT NULL,
+description varchar(50) DEFAULT NULL,
 stock int DEFAULT NULL,
 CONSTRAINT ingredients_pk
 PRIMARY KEY (ingrid)
@@ -138,9 +142,9 @@ PRIMARY KEY (ingrid)
 
 CREATE TABLE events (
 eventid int DEFAULT NULL,
-name varchar DEFAULT NULL,
+name varchar(50) DEFAULT NULL,
 event_date date,
-place varchar DEFAULT NULL,
+place varchar(50) DEFAULT NULL,
 clientno int DEFAULT NULL
 CONSTRAINT events_pk
 PRIMARY KEY (eventid)
@@ -158,8 +162,8 @@ PRIMARY KEY (deliverid)
 
 CREATE TABLE vehicles (
 vehicleid int DEFAULT NULL,
-name varchar DEFAULT NULL,
-plate varchar UNIQUE,
+name varchar(50) DEFAULT NULL,
+plate varchar(50) UNIQUE,
 CONSTRAINT vehicles_pk
 PRIMARY KEY (vehicleid)
 );
@@ -182,7 +186,7 @@ PRIMARY KEY (ingrid, mealid)
 CREATE TABLE serves (
 empno int,
 eventid int DEFAULT NULL,
-services varchar,
+services varchar(50),
 CONSTRAINT serve_pk
 PRIMARY KEY (eventid, empno)
 );
@@ -202,3 +206,45 @@ menu_date date
 CONSTRAINT cooks_pk
 PRIMARY KEY (menuid, empno)
 );
+
+ALTER TABLE employees
+ADD FOREIGN KEY (boss) REFERENCES employees(empno) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE payrolls
+ADD FOREIGN KEY (empno) REFERENCES employees(empno) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+ALTER TABLE salesmen
+ADD FOREIGN KEY (officeid) REFERENCES offices(officeid) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+ALTER TABLE it
+ADD FOREIGN KEY (officeid) REFERENCES offices(officeid) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+ALTER TABLE orders
+ADD FOREIGN KEY (empno) REFERENCES salesmen(empno) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+ALTER TABLE orders
+ADD FOREIGN KEY (clientno) REFERENCES clients(clientno) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+ALTER TABLE delivers
+ADD FOREIGN KEY (empno) REFERENCES deliverers(empno) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+ALTER TABLE delivers
+ADD FOREIGN KEY (orderid) REFERENCES orders(orderid) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+ALTER TABLE repairs
+ADD FOREIGN KEY (empno) REFERENCES it(empno) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE menus
+ADD FOREIGN KEY (orderid) REFERENCES orders(orderid) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE serves
+ADD FOREIGN KEY (empno) REFERENCES waiters(empno) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE serves
+ADD FOREIGN KEY (orderid) REFERENCES orders(orderid) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE cooks
+ADD FOREIGN KEY (empno) REFERENCES chefs(empno) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE cooks
+ADD FOREIGN KEY (menuid, orderid) REFERENCES menus(menuid, orderid) ON DELETE NO ACTION ON UPDATE CASCADE;
