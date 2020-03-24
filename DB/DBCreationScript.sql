@@ -110,7 +110,7 @@ menuid int DEFAULT NULL,
 price int DEFAULT NULL,
 empno int DEFAULT NULL,
 orderid int DEFAULT NULL,
-CONSTRAINT orders_pk
+CONSTRAINT menus_pk
 PRIMARY KEY (menuid, orderid)
 );
 
@@ -186,7 +186,7 @@ PRIMARY KEY (ingrid, mealid)
 CREATE TABLE serves (
 empno int,
 eventid int DEFAULT NULL,
-services varchar(50),
+serv_date date,
 CONSTRAINT serve_pk
 PRIMARY KEY (eventid, empno)
 );
@@ -217,6 +217,12 @@ ALTER TABLE salesmen
 ADD FOREIGN KEY (officeid) REFERENCES offices(officeid) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 ALTER TABLE it
+ADD FOREIGN KEY (officeid) REFERENCES offices(officeid) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+ALTER TABLE human_resources
+ADD FOREIGN KEY (officeid) REFERENCES offices(officeid) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+ALTER TABLE administration
 ADD FOREIGN KEY (officeid) REFERENCES offices(officeid) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 ALTER TABLE orders

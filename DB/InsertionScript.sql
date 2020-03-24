@@ -55,8 +55,18 @@ INSERT INTO salesmen (empno, quota, officeid) VALUES (28, 98000, 1158);
 INSERT INTO salesmen (empno, quota, officeid) VALUES (34, 250000, 1160);
 
 --INSERT human_resources
-INSERT INTO human_resources (empno, officeid) VALUES (43);
+INSERT INTO human_resources (empno, officeid) VALUES (13, 1155);
+INSERT INTO human_resources (empno, officeid) VALUES (18, 1155);
+INSERT INTO human_resources (empno, officeid) VALUES (25, 1155);
+INSERT INTO human_resources (empno, officeid) VALUES (30, 1158);
 
+--INSERT administration
+INSERT INTO administration (empno, officeid) VALUES (14, 1157);
+INSERT INTO administration (empno, officeid) VALUES (19, 1157);
+INSERT INTO administration (empno, officeid) VALUES (20, 1160);
+INSERT INTO administration (empno, officeid) VALUES (29, 1157);
+INSERT INTO administration (empno, officeid) VALUES (32, 1156);
+INSERT INTO administration (empno, officeid) VALUES (35, 1158);
 
 --INSERT deliverers
 INSERT INTO deliverers (empno) VALUES (43);
