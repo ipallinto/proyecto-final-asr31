@@ -71,6 +71,11 @@
 .btn-subs{
   color: #FFFFFF !important;
 }
+
+.modal-header{
+  border:none;
+  margin-bottom: -20px;
+}
 /*<-- /Modal -->*/
 
 body {
