@@ -66,7 +66,7 @@
         document.getElementById("errorBox").style.borderRadius = ".25rem";
         document.getElementById("errorMessage").innerHTML = "Can't send message, fields are missing";
         document.getElementById("errorMessage").style.color = "#D8000C";
-        if (!eForm.match("@") {
+        if (!eForm.match("@")) {
           document.getElementById("errorMessage2").innerHTML = "Email has wrong format";
           document.getElementById("errorMessage").style.color = "#D8000C";
         } else {
@@ -75,6 +75,7 @@
         return false;
       }
     }
+
   </script>
 </head>
 
@@ -333,20 +334,63 @@
     </div>
     <hr>
 
-
     <!-- Call to Action Section -->
     <div class="row mb-4">
       <div class="col-md-8">
         <p>Subscribe to our newsletter and receive the latest news and offers from our company</p>
       </div>
       <div class="col-md-4">
-        <a class="btn btn-lg btn-secondary btn-block" href="#">Subscribe</a>
+        <a class="btn btn-lg btn-secondary btn-block btn-subs" id="mButton">Subscribe</a>
       </div>
     </div>
 
   </div>
   <!-- /.container -->
 
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form class="eSubs" action="index.html" method="post">
+        Email:
+        <br />
+        <input class="form-control" type="text" name="" value="">
+        <br />
+        <input type="submit" name="" value="Subscribe" class="btn btn-primary">
+      </form>
+    </div>
+
+  </div>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("mButton");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
   <!-- Footer -->
   <footer class="py-5 bg-color">
     <div class="container">

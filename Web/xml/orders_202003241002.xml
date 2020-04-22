@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!DOCTYPE orders [
+  <!ELEMENT orders (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (orderid?,orderdate?,price?,clientno?,empno?,sent?,deliverid?)+>
+  <!ELEMENT orderid (#PCDATA)>
+  <!ELEMENT orderdate (#PCDATA)>
+  <!ELEMENT price (#PCDATA)>
+  <!ELEMENT clientno (#PCDATA)>
+  <!ELEMENT empno (#PCDATA)>
+  <!ELEMENT sent (#PCDATA)>
+  <!ELEMENT deliverid (#PCDATA)>
+]>
+<orders>
+</orders>

@@ -1,0 +1,381 @@
+<?xml version="1.0" ?>
+<!DOCTYPE employees [
+  <!ELEMENT employees (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (empno?,name?,age?,contract?,boss?,type?)+>
+  <!ELEMENT empno (#PCDATA)>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT age (#PCDATA)>
+  <!ELEMENT contract (#PCDATA)>
+  <!ELEMENT boss (#PCDATA)>
+  <!ELEMENT type (#PCDATA)>
+]>
+<employees>
+  <DATA_RECORD>
+    <empno>11</empno>
+    <name>ANTONIO ALCAZAR</name>
+    <age>25</age>
+    <contract>2002-02-15</contract>
+    <boss>11</boss>
+    <type>it</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>12</empno>
+    <name>CARLOS CONTRERAS</name>
+    <age>24</age>
+    <contract>2007-12-07</contract>
+    <boss>11</boss>
+    <type>it</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>13</empno>
+    <name>JOSE MARTINEZ</name>
+    <age>28</age>
+    <contract>2003-04-30</contract>
+    <boss>13</boss>
+    <type>human_resources</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>14</empno>
+    <name>GABRIELA PEREZ</name>
+    <age>35</age>
+    <contract>2008-10-14</contract>
+    <boss>14</boss>
+    <type>administration</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>15</empno>
+    <name>JULIANA ACERO</name>
+    <age>28</age>
+    <contract>2012-02-28</contract>
+    <boss>15</boss>
+    <type>salesmen</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>16</empno>
+    <name>MIGUEL CASANOVA</name>
+    <age>28</age>
+    <contract>2005-03-31</contract>
+    <boss>15</boss>
+    <type>salesmen</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>17</empno>
+    <name>JOSE GIRON</name>
+    <age>29</age>
+    <contract>2009-07-11</contract>
+    <boss>11</boss>
+    <type>it</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>18</empno>
+    <name>FELIPE COLOMER</name>
+    <age>24</age>
+    <contract>2014-01-25</contract>
+    <boss>13</boss>
+    <type>human_resources</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>19</empno>
+    <name>JAIME AYALA</name>
+    <age>24</age>
+    <contract>2016-12-25</contract>
+    <boss>14</boss>
+    <type>administration</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>20</empno>
+    <name>FRANCISCO PASTOR</name>
+    <age>26</age>
+    <contract>2004-06-05</contract>
+    <boss>14</boss>
+    <type>administration</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>21</empno>
+    <name>SAMUEL MATUTE</name>
+    <age>27</age>
+    <contract>2006-09-11</contract>
+    <boss>11</boss>
+    <type>it</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>22</empno>
+    <name>TRINIDAD MARCHENA</name>
+    <age>19</age>
+    <contract>2017-08-26</contract>
+    <boss>15</boss>
+    <type>salesmen</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>23</empno>
+    <name>RAMON PERIS</name>
+    <age>23</age>
+    <contract>2008-05-01</contract>
+    <boss>15</boss>
+    <type>salesmen</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>24</empno>
+    <name>ANDRES RAYO</name>
+    <age>18</age>
+    <contract>2018-10-12</contract>
+    <boss>11</boss>
+    <type>it</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>25</empno>
+    <name>LUIS ACUÑA</name>
+    <age>32</age>
+    <contract>2003-06-19</contract>
+    <boss>13</boss>
+    <type>human_resources</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>26</empno>
+    <name>GUILLERMO VICENTE</name>
+    <age>28</age>
+    <contract>2011-08-20</contract>
+    <boss>11</boss>
+    <type>it</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>27</empno>
+    <name>MANUELA ARRIAGA</name>
+    <age>62</age>
+    <contract>2006-10-25</contract>
+    <boss>11</boss>
+    <type>it</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>28</empno>
+    <name>ALICIA CASTELO</name>
+    <age>55</age>
+    <contract>2008-04-17</contract>
+    <boss>15</boss>
+    <type>salesmen</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>29</empno>
+    <name>JAVIER ESPINAR</name>
+    <age>22</age>
+    <contract>2002-11-09</contract>
+    <boss>14</boss>
+    <type>administration</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>30</empno>
+    <name>IROHA TAMAKI</name>
+    <age>18</age>
+    <contract>2020-02-04</contract>
+    <boss>13</boss>
+    <type>human_resources</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>31</empno>
+    <name>JAIME LLORENS</name>
+    <age>47</age>
+    <contract>2010-12-20</contract>
+    <boss>11</boss>
+    <type>it</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>32</empno>
+    <name>SERGIO PORTILLO</name>
+    <age>59</age>
+    <contract>2014-10-10</contract>
+    <boss>14</boss>
+    <type>administration</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>33</empno>
+    <name>SUSANA ORIA</name>
+    <age>45</age>
+    <contract>2003-12-06</contract>
+    <boss>11</boss>
+    <type>it</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>34</empno>
+    <name>BELEN DURO</name>
+    <age>42</age>
+    <contract>2012-08-19</contract>
+    <boss>15</boss>
+    <type>salesmen</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>35</empno>
+    <name>MADOKA KANAME</name>
+    <age>24</age>
+    <contract>2009-05-07</contract>
+    <boss>14</boss>
+    <type>administration</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>36</empno>
+    <name>JORGE ROA</name>
+    <age>20</age>
+    <contract>2011-01-31</contract>
+    <boss>36</boss>
+    <type>chefs</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>37</empno>
+    <name>HERMENEGILDO FOREIRO</name>
+    <age>66</age>
+    <contract>2002-08-22</contract>
+    <boss>36</boss>
+    <type>chefs</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>38</empno>
+    <name>LUCHO PORTUANO</name>
+    <age>27</age>
+    <contract>2005-01-07</contract>
+    <boss>36</boss>
+    <type>chefs</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>39</empno>
+    <name>ANGEL SOTELO</name>
+    <age>42</age>
+    <contract>2013-10-06</contract>
+    <boss>36</boss>
+    <type>chefs</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>40</empno>
+    <name>DEBORA ANGELES</name>
+    <age>54</age>
+    <contract>2015-02-25</contract>
+    <boss>36</boss>
+    <type>chefs</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>41</empno>
+    <name>MARGARITA VINUESA</name>
+    <age>36</age>
+    <contract>2018-12-20</contract>
+    <boss>36</boss>
+    <type>chefs</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>42</empno>
+    <name>MARIA MALDONADO</name>
+    <age>33</age>
+    <contract>2003-10-06</contract>
+    <boss>36</boss>
+    <type>chefs</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>43</empno>
+    <name>HOMURA AKEMI</name>
+    <age>28</age>
+    <contract>2012-07-25</contract>
+    <boss>43</boss>
+    <type>delivers</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>44</empno>
+    <name>NACHO VIDAL</name>
+    <age>42</age>
+    <contract>2016-02-29</contract>
+    <boss>43</boss>
+    <type>delivers</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>45</empno>
+    <name>MIKI SAYAKA</name>
+    <age>20</age>
+    <contract>2002-12-09</contract>
+    <boss>43</boss>
+    <type>delivers</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>46</empno>
+    <name>NIEVES RUEDA</name>
+    <age>40</age>
+    <contract>2007-05-04</contract>
+    <boss>46</boss>
+    <type>waiters</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>47</empno>
+    <name>ANDRES CUELLO</name>
+    <age>19</age>
+    <contract>2010-05-30</contract>
+    <boss>46</boss>
+    <type>waiters</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>48</empno>
+    <name>MAMI TOMOE</name>
+    <age>25</age>
+    <contract>2018-03-22</contract>
+    <boss>46</boss>
+    <type>waiters</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>49</empno>
+    <name>ADRIAN MORAL</name>
+    <age>55</age>
+    <contract>2014-02-04</contract>
+    <boss>46</boss>
+    <type>waiters</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>50</empno>
+    <name>MATT ENMEN</name>
+    <age>36</age>
+    <contract>2011-06-29</contract>
+    <boss>46</boss>
+    <type>waiters</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>51</empno>
+    <name>MANUEL ARCOS</name>
+    <age>52</age>
+    <contract>2015-01-31</contract>
+    <boss>46</boss>
+    <type>waiters</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>52</empno>
+    <name>ANA BUSTAMANTE</name>
+    <age>39</age>
+    <contract>2013-03-01</contract>
+    <boss>46</boss>
+    <type>waiters</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>53</empno>
+    <name>VICENTE CONTRERAS</name>
+    <age>47</age>
+    <contract>2013-03-01</contract>
+    <boss>46</boss>
+    <type>waiters</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>54</empno>
+    <name>CARLOS TUSA</name>
+    <age>52</age>
+    <contract>2004-12-31</contract>
+    <boss>46</boss>
+    <type>waiters</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>55</empno>
+    <name>KYOKO SAKURA</name>
+    <age>20</age>
+    <contract>2008-12-21</contract>
+    <boss>46</boss>
+    <type>waiters</type>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <empno>56</empno>
+    <name>CINDY NERO</name>
+    <age>31</age>
+    <contract>2019-05-02</contract>
+    <boss>46</boss>
+    <type>waiters</type>
+  </DATA_RECORD>
+</employees>
