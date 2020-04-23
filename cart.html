@@ -75,6 +75,10 @@
       }
     }
 
+    function appearTable() {
+      document.getElementById("payTable").style.display = "block";
+    }
+
   </script>
 </head>
 <body>
@@ -127,6 +131,44 @@
       </li>
       <li class="breadcrumb-item active">Cart</li>
     </ol>
+  </div>
+
+  <div class="container">
+    <div class="card card-plain">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>Product</th><th>Quantity</th><th>Price</th><th class="text-center">Remove</th>
+            </thead>
+            <tbody>
+              <tr><td>Vegan Menu</td><td>2</td><td>8,35€</td><td class="text-center"><span>&#10005;</span></td></tr>
+              <tr><td>Asian Menu</td><td>1</td><td>12,10€</td><td class="text-center"><span>&#10005;</span></td></tr>
+              <tr><td>Local Menu</td><td>1</td><td>9,69€</td><td class="text-center"><span>&#10005;</span></td></tr>
+            </tbody>
+          </table>
+          <button class="payB" onclick="appearTable()" id="payT">Pay</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-plain" id="payTable">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>Product</th><th>Quantity</th><th>Price</th><th class="text-center">Remove</th>
+            </thead>
+            <tbody>
+              <tr><td>Vegan Menu</td><td>2</td><td>8,35€</td><td class="text-center"><span>&#10005;</span></td></tr>
+              <tr><td>Asian Menu</td><td>1</td><td>12,10€</td><td class="text-center"><span>&#10005;</span></td></tr>
+              <tr><td>Local Menu</td><td>1</td><td>9,69€</td><td class="text-center"><span>&#10005;</span></td></tr>
+            </tbody>
+          </table>
+          <button class="payB" onclick="appearTable" id="payT">Pay</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->
