@@ -1,0 +1,3 @@
+-- Subscribe button leads to a modal in order to insert the customer's email
+
+-- 

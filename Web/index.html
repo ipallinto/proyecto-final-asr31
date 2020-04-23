@@ -15,40 +15,7 @@
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
-    $(document).ready(function(){
-      $("button#sendMessageButton").click(function(){
-        var cName = $("input#name").val();
-        var cPhone = $("input#phone").val();
-        var cEmail = $("input#email").val();
-        var cMessage = $("textarea#message").val();
 
-        /*<-- #ced4da -->*/
-
-        if (cName == "") {
-          $("input#name").css('border-color', 'red');
-        } else {
-          $("input#name").css('border-color', '#CED4DA');
-        }
-
-        if (cPhone == "") {
-          $("input#phone").css('border-color', 'red');
-        } else {
-          $("input#phone").css('border-color', '#CED4DA');
-        }
-
-        if (cEmail == "") {
-          $("input#email").css('border-color', 'red');
-        } else {
-          $("input#email").css('border-color', '#CED4DA');
-        }
-
-        if (cMessage == "") {
-          $("textarea#message").css('border-color', 'red');
-        } else {
-          $("textarea#message").css('border-color', '#CED4DA');
-        }
-      });
-    });
   </script>
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
@@ -111,7 +78,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Cart</a>
+            <a class="nav-link" href="cart.html">Cart</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login.html">Log In</a>
