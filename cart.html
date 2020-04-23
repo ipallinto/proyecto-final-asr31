@@ -53,15 +53,16 @@
   <link href="css/modern-business.css" rel="stylesheet">
   <script type="text/javascript">
 
-    /*
     window.onload = function deleteOrder() {
-      var orders = document.getElementsByClassName("remOrder");
-
-      for (var i = 0; i < orders.length; i++) {
-        orders[i].addEventListener('click', delete)
+      var index, table = document.getElementById("table");
+      for (var i = 0; i < table.rows.length; i++) {
+        table.rows[i].cells[3].onclick = function() {
+          index = this.parentElement.rowIndex;
+          table.deleteRow(index);
+        }
       }
+
     }
-    */ 
 
     function formValidation() {
       var nForm = document.forms["sentMessage"]["fname"].value;
@@ -99,16 +100,19 @@
       }
 
       var quantities = document.getElementsByClassName("prodQuant");
+
       var prices = document.getElementsByClassName("prodPrice");
 
-      var totalprice = 0
+      var finalprice = 0
 
-      for (var i = 0; i < prices.length; i++) {
+      for (var i = 0; i < prices.length && i < quantities.length; i++) {
         console.log(prices[i].textContent);
-        totalprice = totalprice + parseFloat(prices[i].textContent);
+        console.log(quantities[i].textContent);
+        totalprice = parseInt(quantities[i].textContent) * parseFloat(prices[i].textContent)
+        finalprice = finalprice + parseFloat(totalprice);
       }
 
-      document.getElementById("totalPrice").innerHTML = parseFloat(totalprice);
+      document.getElementById("totalPrice").innerHTML = parseFloat(finalprice);
 
     }
 
@@ -170,7 +174,7 @@
     <div class="card card-plain cartTable">
       <div class="card-body">
         <div class="table-responsive">
-          <table class="table">
+          <table class="table" id="table">
             <thead class=" text-primary">
               <th>Product</th><th class="text-center">Quantity</th><th class="text-center">Price each (€)</th><th class="text-center">Remove</th>
             </thead>
