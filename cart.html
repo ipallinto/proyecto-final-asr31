@@ -52,6 +52,17 @@
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
   <script type="text/javascript">
+
+    /*
+    window.onload = function deleteOrder() {
+      var orders = document.getElementsByClassName("remOrder");
+
+      for (var i = 0; i < orders.length; i++) {
+        orders[i].addEventListener('click', delete)
+      }
+    }
+    */ 
+
     function formValidation() {
       var nForm = document.forms["sentMessage"]["fname"].value;
       var eForm = document.forms["sentMessage"]["fmail"].value;
@@ -75,8 +86,30 @@
       }
     }
 
+    function appearPay() {
+      document.getElementById('payF').style.display = "block";
+    }
+
     function appearTable() {
       document.getElementById("payTable").style.display = "block";
+      var options = document.getElementsByName("pType");
+
+      for (var i = 0; i < options.length; i++) {
+        options[i].setAttribute("onclick", "appearPay()");
+      }
+
+      var quantities = document.getElementsByClassName("prodQuant");
+      var prices = document.getElementsByClassName("prodPrice");
+
+      var totalprice = 0
+
+      for (var i = 0; i < prices.length; i++) {
+        console.log(prices[i].textContent);
+        totalprice = totalprice + parseFloat(prices[i].textContent);
+      }
+
+      document.getElementById("totalPrice").innerHTML = parseFloat(totalprice);
+
     }
 
   </script>
@@ -134,38 +167,41 @@
   </div>
 
   <div class="container">
-    <div class="card card-plain">
+    <div class="card card-plain cartTable">
       <div class="card-body">
         <div class="table-responsive">
           <table class="table">
             <thead class=" text-primary">
-              <th>Product</th><th>Quantity</th><th>Price</th><th class="text-center">Remove</th>
+              <th>Product</th><th class="text-center">Quantity</th><th class="text-center">Price each (€)</th><th class="text-center">Remove</th>
             </thead>
             <tbody>
-              <tr><td>Vegan Menu</td><td>2</td><td>8,35€</td><td class="text-center"><span>&#10005;</span></td></tr>
-              <tr><td>Asian Menu</td><td>1</td><td>12,10€</td><td class="text-center"><span>&#10005;</span></td></tr>
-              <tr><td>Local Menu</td><td>1</td><td>9,69€</td><td class="text-center"><span>&#10005;</span></td></tr>
+              <tr><td>Vegan Menu</td><td class="text-center prodQuant">2</td><td class="text-center prodPrice">8.35</td><td class="text-center"><span class="remOrder">&#10005;</span></td></tr>
+              <tr><td>Asian Menu</td><td class="text-center prodQuant">1</td><td class="text-center prodPrice">12.10</td><td class="text-center"><span class="remOrder">&#10005;</span></td></tr>
+              <tr><td>Local Menu</td><td class="text-center prodQuant">1</td><td class="text-center prodPrice">9.69</td><td class="text-center"><span class="remOrder">&#10005;</span></td></tr>
             </tbody>
           </table>
-          <button class="payB" onclick="appearTable()" id="payT">Pay</button>
+          <button class="payB" onclick="appearTable()" id="payT">Payment</button>
         </div>
       </div>
     </div>
 
-    <div class="card card-plain" id="payTable">
+    <div class="card card-plain cartTable" id="payTable">
       <div class="card-body">
         <div class="table-responsive">
           <table class="table">
             <thead class=" text-primary">
-              <th>Product</th><th>Quantity</th><th>Price</th><th class="text-center">Remove</th>
+              <th>Payment type</th><th></th><th></th><th class="text-center">Total price</th>
             </thead>
             <tbody>
-              <tr><td>Vegan Menu</td><td>2</td><td>8,35€</td><td class="text-center"><span>&#10005;</span></td></tr>
-              <tr><td>Asian Menu</td><td>1</td><td>12,10€</td><td class="text-center"><span>&#10005;</span></td></tr>
-              <tr><td>Local Menu</td><td>1</td><td>9,69€</td><td class="text-center"><span>&#10005;</span></td></tr>
+              <tr>
+                <td><input type="radio" name="pType" id="cd" value="Credit Card"> <label for="cd">Credit Card</label></td>
+                <td><input type="radio" name="pType" id="bt" value="Bank transfer"> <label for="bt">Bank transfer</label></td>
+                <td><input type="radio" name="pType" id="pp" value="Paypal"> <label for="pp">Paypal</label></td>
+                <td class="text-center"><p id="totalPrice"></p></td>
+              </tr>
             </tbody>
           </table>
-          <button class="payB" onclick="appearTable" id="payT">Pay</button>
+          <button class="payF" id="payF">Pay</button>
         </div>
       </div>
     </div>
