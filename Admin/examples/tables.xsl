@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8" />
@@ -171,7 +172,6 @@
                 <h4 class="card-title"> Simple Table</h4>
               </div>
 
-              <xsl:template match="/">
               <div class="card-body">
                 <div class="table-responsive">
                   <table class="table tablesorter " id="">
@@ -189,7 +189,6 @@
                   </table>
                 </div>
               </div>
-              </xsl:template>
 
             </div>
           </div>
@@ -364,4 +363,5 @@
     </script>
 </body>
 </html>
+</xsl:template>
 </xsl:stylesheet>
