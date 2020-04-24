@@ -48,6 +48,15 @@
           $("textarea#message").css('border-color', '#CED4DA');
         }
       });
+      $("input#sendSub").click(function() {
+        var sEmail = $("input[name=subMail]").val();
+
+        if (sEmail == "") {
+          $("input[name=subMail]").css('border-color', 'red');
+        } else {
+          $("input[name=subMail]").css('border-color', '#CED4DA');
+        }
+      });
     });
 
   </script>
@@ -376,7 +385,7 @@
         <br />
         <input class="form-control" type="text" name="subMail" value="">
         <br />
-        <input type="submit" name="" value="Subscribe" class="btn btn-primary">
+        <input type="submit" name="" value="Subscribe" class="btn btn-primary" id="sendSub">
         <div id="subErrorBox">
           <p id="subErrorMessage"></p>
         </div>
