@@ -48,38 +48,6 @@
           $("textarea#message").css('border-color', '#CED4DA');
         }
       });
-      // Wait for the DOM to be ready
-      $(function() {
-
-        $("form[name='subscribe']").validate({
-
-          rules: {
-
-            firstname: "required",
-            lastname: "required",
-            email: {
-              required: true,
-              email: true
-            },
-            password: {
-              required: true,
-              minlength: 5
-            }
-          },
-          messages: {
-            firstname: "Please enter your firstname",
-            lastname: "Please enter your lastname",
-            password: {
-              required: "Please provide a password",
-              minlength: "Your password must be at least 5 characters long"
-            },
-            email: "Please enter a valid email address"
-          },
-          submitHandler: function(form) {
-            form.submit();
-          }
-        });
-      });
     });
 
   </script>
@@ -107,6 +75,21 @@
         }
         return false;
       }
+    }
+
+    function subValidation() {
+      var subEmail = document.forms["subscribe"]["subMail"].value;
+
+      if (subEmail == "") {
+        document.getElementById("subErrorBox").style.margin = "10px 0px";
+        document.getElementById("subErrorBox").style.padding = "17px 0px 1px 5px";
+        document.getElementById("subErrorBox").style.backgroundColor = "#FFD2D2";
+        document.getElementById("subErrorBox").style.borderRadius = ".25rem";
+        document.getElementById("subErrorMessage").innerHTML = "Can't send message, fields are missing";
+        document.getElementById("subErrorMessage").style.color = "#D8000C";
+        return false;
+      }
+
     }
 
   </script>
@@ -292,7 +275,7 @@
           </div>
           <div id="success"></div>
           <!-- For success/fail messages -->
-          <button type="submit" class="btn btn-primary" onsubmit="return formValidation()" id="sendMessageButton">Send Message</button>
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Send Message</button>
         </form>
         <div id="errorBox">
           <p id="errorMessage"></p>
@@ -388,12 +371,15 @@
       <div class="modal-header">
         <span class="close">&times;</span>
       </div>
-      <form class="eSubs" name="subscribe" action="index.html" method="post">
+      <form class="eSubs" name="subscribe" action="index.html" method="post" onsubmit="return subValidation()">
         Email:
         <br />
-        <input class="form-control" type="text" name="" value="">
+        <input class="form-control" type="text" name="subMail" value="">
         <br />
         <input type="submit" name="" value="Subscribe" class="btn btn-primary">
+        <div id="subErrorBox">
+          <p id="subErrorMessage"></p>
+        </div>
       </form>
     </div>
 
