@@ -169,6 +169,7 @@
               <div class="card-header">
                 <h4 class="card-title"> Simple Table</h4>
               </div>
+              <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               <xsl:template match="/">
               <div class="card-body">
                 <div class="table-responsive">
@@ -188,6 +189,7 @@
                 </div>
               </div>
               </xsl:template>
+            </xsl:stylesheet>
             </div>
           </div>
           <div class="col-md-12">
