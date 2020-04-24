@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8" />
@@ -161,6 +162,32 @@
                   </table>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="card ">
+              <div class="card-header">
+                <h4 class="card-title"> Simple Table</h4>
+              </div>
+              <xsl:template match="/">
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table tablesorter " id="">
+                    <thead class=" text-primary">
+                      <th>Name</th><th>Country</th>
+                    </thead>
+                    <tbody>
+                      <xsl:for-each select="employees/DATA_RECORD">
+                        <tr>
+                          <td><xsl:value-of select="empno"/></td>
+                          <td><xsl:value-of select="name"/></td>
+                        </tr>
+                      </xsl:for-each>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              </xsl:template>
             </div>
           </div>
           <div class="col-md-12">
@@ -335,3 +362,5 @@
 </body>
 
 </html>
+</xsl:template>
+</xsl:stylesheet>
