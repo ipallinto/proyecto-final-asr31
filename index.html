@@ -15,6 +15,72 @@
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
+    $(document).ready(function(){
+      $("button#sendMessageButton").click(function(){
+        var cName = $("input#name").val();
+        var cPhone = $("input#phone").val();
+        var cEmail = $("input#email").val();
+        var cMessage = $("textarea#message").val();
+
+        /*<-- #ced4da -->*/
+
+        if (cName == "") {
+          $("input#name").css('border-color', 'red');
+        } else {
+          $("input#name").css('border-color', '#CED4DA');
+        }
+
+        if (cPhone == "") {
+          $("input#phone").css('border-color', 'red');
+        } else {
+          $("input#phone").css('border-color', '#CED4DA');
+        }
+
+        if (cEmail == "") {
+          $("input#email").css('border-color', 'red');
+        } else {
+          $("input#email").css('border-color', '#CED4DA');
+        }
+
+        if (cMessage == "") {
+          $("textarea#message").css('border-color', 'red');
+        } else {
+          $("textarea#message").css('border-color', '#CED4DA');
+        }
+      });
+      // Wait for the DOM to be ready
+      $(function() {
+
+        $("form[name='subscribe']").validate({
+
+          rules: {
+
+            firstname: "required",
+            lastname: "required",
+            email: {
+              required: true,
+              email: true
+            },
+            password: {
+              required: true,
+              minlength: 5
+            }
+          },
+          messages: {
+            firstname: "Please enter your firstname",
+            lastname: "Please enter your lastname",
+            password: {
+              required: "Please provide a password",
+              minlength: "Your password must be at least 5 characters long"
+            },
+            email: "Please enter a valid email address"
+          },
+          submitHandler: function(form) {
+            form.submit();
+          }
+        });
+      });
+    });
 
   </script>
   <!-- Custom styles for this template -->
@@ -322,7 +388,7 @@
       <div class="modal-header">
         <span class="close">&times;</span>
       </div>
-      <form class="eSubs" action="index.html" method="post">
+      <form class="eSubs" name="subscribe" action="index.html" method="post">
         Email:
         <br />
         <input class="form-control" type="text" name="" value="">
