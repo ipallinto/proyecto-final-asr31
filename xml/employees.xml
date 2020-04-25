@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type="text/xsl" href="../Admin/examples/tables.xsl"?>
-<?xml-stylesheet type="text/css" href="../Admin/assets/css/bootstrap.min.css"?>
-<?xml-stylesheet type="text/css" href="../Admin/assets/css/black-dashboard.css?v=1.0.0"?>
-<?xml-stylesheet type="text/css" href="../Admin/assets/demo/demo.css"?>
+<?xml-stylesheet type="text/xsl" href="../../Admin/examples/tables.xsl"?>
+<?xml-stylesheet type="text/css" href="../../Admin/assets/css/bootstrap.min.css"?>
+<?xml-stylesheet type="text/css" href="../../Admin/assets/css/black-dashboard.css?v=1.0.0"?>
+<?xml-stylesheet type="text/css" href="../../Admin/assets/demo/demo.css"?>
 <!DOCTYPE employees [
   <!ELEMENT employees (DATA_RECORD*)>
   <!ELEMENT DATA_RECORD (empno?,name?,age?,contract?,boss?,type?)+>
