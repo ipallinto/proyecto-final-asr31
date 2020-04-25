@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-<xsl:template match="/">
+<xsl:template match="employees">
 <html>
 <head>
   <meta charset="utf-8" />
@@ -189,7 +189,7 @@
                       <th>Name</th><th>Country</th>
                     </thead>
                     <tbody>
-                      <xsl:for-each select="employees/DATA_RECORD">
+                      <xsl:for-each select="DATA_RECORD">
                         <tr>
                           <td><xsl:value-of select="empno"/></td>
                           <td><xsl:value-of select="name"/></td>
