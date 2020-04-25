@@ -193,7 +193,7 @@
                         <tr>
                           <td><xsl:value-of select="empno"/></td>
                           <td><xsl:value-of select="name"/></td>
-                          <td><xsl:value-of select="type"/></td>
+                          <td><xsl:value-of select="age"/></td>
                         </tr>
                       </xsl:for-each>
                     </tbody>
