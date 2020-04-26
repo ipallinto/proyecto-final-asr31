@@ -3,9 +3,14 @@
 <?xml-stylesheet type="text/css" href="../Admin/assets/css/bootstrap.min.css"?>
 <?xml-stylesheet type="text/css" href="../Admin/assets/css/black-dashboard.css?v=1.0.0"?>
 <?xml-stylesheet type="text/css" href="../Admin/assets/demo/demo.css"?>
-<?xml-stylesheet type="text/javascript" href="../Admin/assets/js/black-dashboard.min.css"?>
-<?xml-stylesheet type="text/javascript" href="../Admin/assets/js/black-dashboard.min.css"?>
-<?xml-stylesheet type="text/javascript" href="../Admin/assets/demo/demo.css"?>
+<?xml-stylesheet type="text/javascript" href="../Admin/assets/js/core/bootstrap.min.js"?>
+<?xml-stylesheet type="text/javascript" href="../Admin/assets/js/core/jquery.min.js"?>
+<?xml-stylesheet type="text/javascript" href="../Admin/assets/js/core/popper.min.js"?>
+<?xml-stylesheet type="text/javascript" href="../Admin/assets/plugins/bootstrap-notify.js"?>
+<?xml-stylesheet type="text/javascript" href="../Admin/assets/plugins/chartjs.min.js"?>
+<?xml-stylesheet type="text/javascript" href="../Admin/assets/plugins/perfect-scrollbar.jquery.min.js"?>
+<?xml-stylesheet type="text/javascript" href="../Admin/assets/js/black-dashboard.min.js"?>
+
 <!DOCTYPE employees [
   <!ELEMENT employees (DATA_RECORD*)>
   <!ELEMENT DATA_RECORD (empno?,name?,age?,contract?,boss?,type?)+>
