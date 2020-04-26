@@ -19,7 +19,7 @@
 
   <!-- Nucleo Icons -->
 
-  <link href="../Admin/assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="https://ipallinto.github.io/proyecto-final-asr31/Admin/assets/css/nucleo-icons.css" rel="stylesheet" />
 
   <!-- CSS Files -->
   <!--
@@ -31,7 +31,7 @@
 
   <!-- CSS Just for demo purpose, don't include it in your project -->
 
-  <link href="../Admin/assets/demo/demo.css" rel="stylesheet" />
+  <link href="https://ipallinto.github.io/proyecto-final-asr31/Admin/assets/demo/demo.css" rel="stylesheet" />
 
 </head>
 
@@ -91,26 +91,10 @@
           <div class="collapse navbar-collapse" id="navigation">
             <ul class="navbar-nav ml-auto ">
               <div class="search-bar input-group">
-                <!-- <input type="text" class="form-control" placeholder="Search...">
-      <div class="input-group-addon"><i class="tim-icons icon-zoom-split"></i></div> -->
                 <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split"></i></button>
                 <!-- You can choose types of search input -->
               </div>
-              <!-- <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <i class="tim-icons icon-simple-remove"></i>
-          </button>
-        </div>
 
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div> -->
               <li class="dropdown nav-item">
                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                   <div class="photo">
@@ -188,7 +172,7 @@
                 <div class="table-responsive">
                   <table class="table tablesorter " id="">
                     <thead class=" text-primary">
-                      <th>Name</th><th>Country</th>
+                      <th>Employee No.</th><th>Country</th><th>Age</th><th>Contract</th><th>Boss</th><th>Type</th>
                     </thead>
                     <tbody>
                       <xsl:for-each select="DATA_RECORD">
@@ -196,6 +180,9 @@
                           <td><xsl:value-of select="empno"/></td>
                           <td><xsl:value-of select="name"/></td>
                           <td><xsl:value-of select="age"/></td>
+                          <td><xsl:value-of select="contract"/></td>
+                          <td><xsl:value-of select="boss"/></td>
+                          <td><xsl:value-of select="type"/></td>
                         </tr>
                       </xsl:for-each>
                     </tbody>
@@ -250,32 +237,32 @@
     </div>
 
     <!--   Core JS Files   -->
-    <!--
-    <script src="../assets/js/core/jquery.min.js"></script>
-    <script src="../assets/js/core/popper.min.js"></script>
-    <script src="../assets/js/core/bootstrap.min.js"></script>
-    <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    -->
+
+    <script src="https://ipallinto.github.io/proyecto-final-asr31/Admin/assets/js/core/jquery.min.js"></script>
+    <script src="https://ipallinto.github.io/proyecto-final-asr31/Admin/assets/js/core/popper.min.js"></script>
+    <script src="https://ipallinto.github.io/proyecto-final-asr31/Admin/assets/js/core/bootstrap.min.js"></script>
+    <script src="https://ipallinto.github.io/proyecto-final-asr31/Admin/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+
     <!--  Google Maps Plugin    -->
-    <!--
+
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-    -->
+
     <!-- Chart JS -->
-    <!--
-    <script src="../assets/js/plugins/chartjs.min.js"></script>
-    -->
+
+    <script src="https://ipallinto.github.io/proyecto-final-asr31/Admin/assets/js/plugins/chartjs.min.js"></script>
+
     <!--  Notifications Plugin    -->
-    <!--
-    <script src="../assets/js/plugins/bootstrap-notify.js"></script>
-    -->
+
+    <script src="https://ipallinto.github.io/proyecto-final-asr31/Admin/assets/js/plugins/bootstrap-notify.js"></script>
+
     <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
-    <!--
-    <script src="../assets/js/black-dashboard.min.js?v=1.0.0" type="text/javascript"></script>
-    -->
+
+    <script src="https://ipallinto.github.io/proyecto-final-asr31/Admin/assets/js/black-dashboard.min.js?v=1.0.0" type="text/javascript"></script>
+
     <!-- Black Dashboard DEMO methods, don't include it in your project! -->
-    <!--
-    <script src="../assets/demo/demo.js"></script>
-    -->
+
+    <script src="https://ipallinto.github.io/proyecto-final-asr31/Admin/assets/demo/demo.js"></script>
+
     <script>
       $(document).ready(function() {
         $().ready(function() {
