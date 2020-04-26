@@ -19,16 +19,16 @@
 
   <!-- Nucleo Icons -->
 
-  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../Admin/assets/css/nucleo-icons.css" rel="stylesheet" />
 
   <!-- CSS Files -->
 
-  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="../assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+  <link href="../Admin/assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../Admin/assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
 
   <!-- CSS Just for demo purpose, don't include it in your project -->
 
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link href="../Admin/assets/demo/demo.css" rel="stylesheet" />
 
 </head>
 
