@@ -16,20 +16,7 @@
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript">
-    function loginValidation() {
-      var aName = document.forms["admin"]["uName"].value;
-      var aPass = document.forms["admin"]["uPass"].value;
 
-      if (aName == "" || aPass == "") {
-        document.getElementById("aErrorB").style.margin = "10px 0px";
-        document.getElementById("aErrorB").style.padding = "17px 0px 1px 5px";
-        document.getElementById("aErrorB").style.backgroundColor = "#FFD2D2";
-        document.getElementById("aErrorB").style.borderRadius = ".25rem";
-        document.getElementById("aErrorM").innerHTML = "Can't send message, fields are missing";
-        document.getElementById("aErrorM").style.color = "#D8000C";
-        return false;
-      }
-    }
   </script>
 </head>
 <body>
@@ -44,7 +31,7 @@
          <div class="col-md-6 col-sm-12">
             <a href="index.html"><img src="images/logo.png" width="400px" height="400px" alt=""></a>
             <div class="login-form">
-               <form onsubmit="return loginValidation()" name="admin">
+               <form name="admin">
                   <div class="form-group">
                      <label>User Name</label>
                      <input type="text" class="form-control" name="uName" placeholder="User Name">
@@ -53,11 +40,10 @@
                      <label>Password</label>
                      <input type="password" class="form-control" name="uPass" placeholder="Password">
                   </div>
-                  <button type="submit" class="btn btn-black">Login</button>
+                  <button type="submit" class="btn btn-black" href="Admin/examples/dashboard.html">Login</button>
                   <button type="submit" class="btn btn-secondary">Register</button>
                   <div class="aErrorB">
                     <div id="aErrorM">
-                      <!-- <a href="Admin/examples/dashboard.html">Login<a/> -->
                     </div>
                   </div>
                </form>
