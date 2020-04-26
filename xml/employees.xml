@@ -1,8 +1,10 @@
 <?xml version="1.0" ?>
+<!--
 <?xml-stylesheet type="text/xsl" href="./Admin/examples/tables.xsl"?>
 <?xml-stylesheet type="text/css" href="./Admin/assets/css/bootstrap.min.css"?>
 <?xml-stylesheet type="text/css" href="./Admin/assets/css/black-dashboard.css?v=1.0.0"?>
 <?xml-stylesheet type="text/css" href="./Admin/assets/demo/demo.css"?>
+-->
 <?xml-stylesheet type="text/javascript" href="./Admin/assets/js/core/bootstrap.min.js"?>
 <?xml-stylesheet type="text/javascript" href="./Admin/assets/js/core/jquery.min.js"?>
 <?xml-stylesheet type="text/javascript" href="./Admin/assets/js/core/popper.min.js"?>
