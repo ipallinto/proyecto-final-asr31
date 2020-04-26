@@ -22,9 +22,12 @@
   <link href="../Admin/assets/css/nucleo-icons.css" rel="stylesheet" />
 
   <!-- CSS Files -->
-
+  <!--
   <link href="../Admin/assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="../Admin/assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+  -->
+  <link href="https://ipallinto.github.io/proyecto-final-asr31/Admin/assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://ipallinto.github.io/proyecto-final-asr31/Admin/assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
 
   <!-- CSS Just for demo purpose, don't include it in your project -->
 
