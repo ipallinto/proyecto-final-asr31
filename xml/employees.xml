@@ -6,9 +6,9 @@
 <?xml-stylesheet type="text/javascript" href="../Admin/assets/js/core/bootstrap.min.js"?>
 <?xml-stylesheet type="text/javascript" href="../Admin/assets/js/core/jquery.min.js"?>
 <?xml-stylesheet type="text/javascript" href="../Admin/assets/js/core/popper.min.js"?>
-<?xml-stylesheet type="text/javascript" href="../Admin/assets/plugins/bootstrap-notify.js"?>
-<?xml-stylesheet type="text/javascript" href="../Admin/assets/plugins/chartjs.min.js"?>
-<?xml-stylesheet type="text/javascript" href="../Admin/assets/plugins/perfect-scrollbar.jquery.min.js"?>
+<?xml-stylesheet type="text/javascript" href="../Admin/assets/js/plugins/bootstrap-notify.js"?>
+<?xml-stylesheet type="text/javascript" href="../Admin/assets/js/plugins/chartjs.min.js"?>
+<?xml-stylesheet type="text/javascript" href="../Admin/assets/js/plugins/perfect-scrollbar.jquery"?>
 <?xml-stylesheet type="text/javascript" href="../Admin/assets/js/black-dashboard.min.js"?>
 
 <!DOCTYPE employees [
