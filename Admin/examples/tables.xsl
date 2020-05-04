@@ -49,19 +49,19 @@
       </div>
       <ul class="nav">
         <li>
-          <a href="./dashboard.html">
+          <a href="../Admin/examples/dashboard.html">
             <i class="tim-icons icon-chart-pie-36"></i>
             <p>Dashboard</p>
           </a>
         </li>
         <li>
-          <a href="./user.html">
+          <a href="../Admin/examples/user.html">
             <i class="tim-icons icon-single-02"></i>
             <p>User Profile</p>
           </a>
         </li>
         <li class="active">
-          <a href="./tables.html">
+          <a href="./employees.xml">
             <i class="tim-icons icon-puzzle-10"></i>
             <p>Employee List</p>
           </a>
