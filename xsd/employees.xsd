@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="employees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DATA_RECORD" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="DATA_RECORD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="empno" type="xs:integer"/>
+
+
+        <xs:element name="name" type="xs:string"/>
+
+
+        <xs:element name="age">
+          <xs:simpleType>
+            <xs:restriction base = "xs:integer">
+              <xs:minInclusive value="18"/>
+              <xs:maxInclusive value="67"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+
+        <xs:element name="contract" type="xs:date"/>
+
+
+        <xs:element name="boss" type="xs:integer"/>
+
+
+        <xs:element name="type">
+          <xs:simpleType>
+            <xs:restriction base = "xs:string">
+              <xs:enumeration value="waiters"/>
+              <xs:enumeration value="it"/>
+              <xs:enumeration value="human_resources"/>
+              <xs:enumeration value="administration"/>
+              <xs:enumeration value="salesmen"/>
+              <xs:enumeration value="chefs"/>
+              <xs:enumeration value="delivers"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
